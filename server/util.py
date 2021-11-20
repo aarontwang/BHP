@@ -7,7 +7,7 @@ __data_columns = None
 __model = None
 
 
-def get_estimated_price(location, sqft, bhk, bath):
+def get_estimated_price(location, sqft, bath, bhk):
     try:
         loc_index = __data_columns.index(location.lower())
     except:
@@ -15,12 +15,12 @@ def get_estimated_price(location, sqft, bhk, bath):
 
     x = np.zeros(len(__data_columns))
     x[0] = sqft
-    x[1] = bhk
-    x[2] = bath
+    x[1] = bath
+    x[2] = bhk
     if loc_index >= 0:
         x[loc_index] = 1
 
-    return round(__model.predict([x])[0],2)
+    return round(__model.predict([x])[0], 2)
 
 
 def get_location_names():
@@ -43,7 +43,10 @@ def load_saved_artifacts():
     print("Loading saved artifacts...done")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     load_saved_artifacts()
     print(get_location_names())
     print(get_estimated_price('1st Phase JP Nagar', 1000, 2, 2))
+    print(get_estimated_price('1st Phase JP Nagar', 1000, 2, 3))
+    print(get_estimated_price('1st Phase JP Nagar', 1000, 3, 3))
+

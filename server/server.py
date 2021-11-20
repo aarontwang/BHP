@@ -4,8 +4,9 @@ import util
 app = Flask(__name__)
 
 
-@app.route('/get_location_names')
+@app.route('/get_location_names', methods=['GET'])
 def get_location_names():
+    print(util.get_location_names())
     response = jsonify({
         'locations': util.get_location_names()
     })
@@ -14,7 +15,7 @@ def get_location_names():
     return response
 
 
-@app.route('/predicted_home_price', methods=['POST'])
+@app.route('/predict_home_price', methods=["GET", 'POST'])
 def predict_home_price():
     total_sqft = float(request.form['total_sqft'])
     location = request.form['location']
@@ -32,4 +33,5 @@ def predict_home_price():
 
 if __name__ == "__main__":
     print("Starting Python Flask Server for Home Price Prediction...")
+    util.load_saved_artifacts()
     app.run()
