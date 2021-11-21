@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+.content:before {
+    content: "";
+    z-index: -1;
+    background-image: url("house_background.jpg");
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
 .switch-field {
     display: flex;
     margin-bottom: 36px;
     overflow: auto;
+    z-index: 2;
 }
 
 .switch-field input {
@@ -58,6 +80,7 @@
 h2 {
     font-size: 18px;
     margin-bottom: 8px;
+    z-index: 2;
 }
 
 .area {
@@ -72,6 +95,7 @@ h2 {
     font-size: 15px;
     height: 35px;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .location {
@@ -86,6 +110,7 @@ h2 {
     font-size: 15px;
     height: 40px;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .location:hover {
@@ -102,6 +127,7 @@ h2 {
     height: 35px;
     text-align: center;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .submit:hover {
@@ -109,7 +135,4 @@ h2 {
     cursor: pointer;
 }
 
-html {
-    background: url("house_background.png") no-repeat center fixed;
-    background-size: cover;
-}
+
