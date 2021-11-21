@@ -3,7 +3,7 @@
 .switch-field {
     display: flex;
     margin-bottom: 36px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .switch-field input {
@@ -12,7 +12,7 @@
     height: 1px;
     width: 1px;
     border: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .switch-field label {
@@ -28,6 +28,7 @@
 }
 
 .switch-field label:hover {
+    background-color: #bddbab;
     cursor: pointer;
 }
 
@@ -87,6 +88,10 @@ h2 {
     border-radius: 5px;
 }
 
+.location:hover {
+    cursor: pointer;
+}
+
 .submit {
     background: #a5dc86;
     width: 76%;
@@ -99,3 +104,12 @@ h2 {
     border-radius: 5px;
 }
 
+.submit:hover {
+    background-color: #bddbab;
+    cursor: pointer;
+}
+
+html {
+    background: url("house_background.png") no-repeat center fixed;
+    background-size: cover;
+}
