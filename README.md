@@ -16,8 +16,10 @@ Uses a Linear Regression model from sklearn to predict home prices in Banglore b
 1. Set up WinSCP. Connect to Amazon EC2 server.
 2. Copy 'BHP' folder into WinSCP.
 3. Use verification key and following code to connect to ubuntu.
+
   `ssh -i "C:\Users\slcccc\.ssh\bhp.pem" ubuntu@ec2-18-222-253-124.us-east-2.compute.amazonaws.com`
-5. Run nginx.
+4. Run nginx.
+
   `sudo service nginx start`
-7. Open url in browser.
+5. Open url in browser.
   ec2-18-222-253-124.us-east-2.compute.amazonaws.com
