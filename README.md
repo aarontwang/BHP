@@ -28,4 +28,4 @@ sudo service nginx start
 python3 /home/ubuntu/BHP/server/server.py
 ```
 6. Open url in browser. \n
-  ec2-18-222-253-124.us-east-2.compute.amazonaws.com
+  [BHP Website](ec2-18-222-253-124.us-east-2.compute.amazonaws.com)
