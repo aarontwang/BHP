@@ -19,9 +19,13 @@ Uses a Linear Regression model from sklearn to predict home prices in Banglore b
 ```
 ssh -i "C:\Users\slcccc\.ssh\bhp.pem" ubuntu@ec2-18-222-253-124.us-east-2.compute.amazonaws.com
 ```
-5. Run nginx. 
+4. Run nginx. 
 ```
 sudo service nginx start
 ```
-7. Open url in browser.
+5. Run server.py file to start Python Flask server.
+```
+python3 /home/ubuntu/BHP/server/server.py
+```
+6. Open url in browser.
   ec2-18-222-253-124.us-east-2.compute.amazonaws.com
