@@ -33,11 +33,11 @@ def load_saved_artifacts():
     global __locations
     global __model
 
-    with open('./artifacts/columns.json', 'r') as f:
+    with open('/home/ubuntu/BHP/server/artifacts/columns.json', 'r') as f:
         __data_columns = json.load(f)['data_columns']
         __locations = __data_columns[3:]
 
-    with open('./artifacts/bhp.pickle', 'rb') as f:
+    with open('/home/ubuntu/BHP/server/artifacts/bhp.pickle', 'rb') as f:
         __model = pickle.load(f)
 
     print("Loading saved artifacts...done")
